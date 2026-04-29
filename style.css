@@ -1,954 +1,386 @@
-/* Variables de Color */
-:root {
-    --primary-color: #FF6B35;
-    --secondary-color: #4A3F35;
-    --accent-color: #FFD700;
-    --light-bg: #F5F5F5;
-    --dark-text: #2C2C2C;
-    --border-radius: 8px;
-    --transition: all 0.3s ease;
-}
-
-/* Reset y Estilos Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--dark-text);
-    background-color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Navegación */
-.navbar {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: var(--transition);
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content h2 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.hero-content p {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.tagline {
-    font-size: 1.1rem;
-    font-style: italic;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-/* Botones */
-.btn {
-    padding: 12px 30px;
-    border: none;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: var(--transition);
-}
-
-.btn-primary {
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-}
-
-.btn-primary:hover {
-    background-color: #FFC700;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-}
-
-.btn-secondary {
-    background-color: white;
-    color: var(--primary-color);
-    border: 2px solid white;
-}
-
-.btn-secondary:hover {
-    background-color: transparent;
-    color: white;
-}
-
-/* Highlights */
-.highlights {
-    padding: 60px 20px;
-    background-color: var(--light-bg);
-}
-
-.highlights h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--secondary-color);
-}
-
-.highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.highlight-card {
-    background: white;
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.highlight-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.highlight-card i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.highlight-card h3 {
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-}
-
-/* Menú */
-.menu {
-    padding: 60px 20px;
-    background-color: white;
-}
-
-.menu h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--secondary-color);
-}
-
-.menu-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
-.tab-button {
-    padding: 10px 20px;
-    border: 2px solid var(--primary-color);
-    background-color: white;
-    color: var(--primary-color);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-weight: bold;
-    transition: var(--transition);
-}
-
-.tab-button.active {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.tab-button:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.menu-item {
-    background: linear-gradient(135deg, #fff9e6 0%, #fff 100%);
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    border-left: 4px solid var(--primary-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: var(--transition);
-    overflow: hidden;
-}
-
-.menu-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.menu-item:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    transform: translateY(-3px);
-}
-
-.menu-item h3 {
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.menu-item .description {
-    color: #666;
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-}
-
-.menu-item .price {
-    color: var(--primary-color);
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-
-/* Ubicación */
-.location {
-    padding: 60px 20px;
-    background-color: var(--light-bg);
-}
-
-.location h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--secondary-color);
-}
-
-.location-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-}
-
-.location-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.info-box {
-    background: white;
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.info-box h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.info-box p {
-    color: #555;
-    margin: 0.3rem 0;
-}
-
-.info-box a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.info-box a:hover {
-    text-decoration: underline;
-}
-
-.hours-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.hours-table tr {
-    border-bottom: 1px solid #eee;
-}
-
-.hours-table td {
-    padding: 0.5rem 0;
-}
-
-.hours-table td:first-child {
-    font-weight: bold;
-    width: 100px;
-}
-
-.location-map {
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Reseñas */
-.reviews {
-    padding: 60px 20px;
-    background-color: white;
-}
-
-.reviews h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--secondary-color);
-}
-
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.review-card {
-    background: linear-gradient(135deg, #fff9e6 0%, #fff 100%);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    border-top: 4px solid var(--primary-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: var(--transition);
-}
-
-.review-card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    transform: translateY(-3px);
-}
-
-.review-card .stars {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.review-card .review-text {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.review-card .review-author {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-/* Contacto */
-.contact {
-    padding: 60px 20px;
-    background-color: var(--light-bg);
-}
-
-.contact h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--secondary-color);
-}
-
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-}
-
-.contact-info h3,
-.contact-services h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.contact-info p,
-.contact-services p {
-    color: #555;
-    margin-bottom: 1rem;
-}
-
-.contact-list {
-    list-style: none;
-}
-
-.contact-list li {
-    padding: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #555;
-}
-
-.contact-list i {
-    color: var(--primary-color);
-    width: 20px;
-}
-
-.contact-list a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-list a:hover {
-    text-decoration: underline;
-}
-
-.social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.social-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    font-size: 0.95rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.social-badge:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
-}
-
-.social-badge i {
-    font-size: 1.2rem;
-}
-
-/* Footer */
-.footer {
-    background-color: var(--secondary-color);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
-.footer p {
-    margin: 0.5rem 0;
-}
-
-/* Menú Toggle Móvil */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    transition: var(--transition);
-}
-
-.menu-toggle:hover {
-    color: var(--primary-color);
-}
-
-.menu-toggle.active {
-    color: var(--primary-color);
-}
-
-/* Optimizaciones para dispositivos móviles */
-body.mobile-device {
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
-
-body.mobile-device input,
-body.mobile-device textarea,
-body.mobile-device select {
-    font-size: 16px;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .container {
-        padding: 0 15px;
-    }
-
-    .menu-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0.8rem 0;
-    }
-
-    .navbar .container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0;
-    }
-
-    .navbar-brand {
-        flex: 1;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: var(--secondary-color);
-        flex-direction: column;
-        gap: 0;
-        padding: 1rem 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        z-index: 99;
-    }
-
-    .nav-links.active {
-        max-height: 300px;
-    }
-
-    .nav-links li {
-        padding: 0.8rem 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-links a {
-        display: block;
-        font-size: 1rem;
-    }
-
-    .logo {
-        font-size: 1.3rem;
-    }
-
-    .hero {
-        padding: 60px 15px;
-        min-height: 400px;
-    }
-
-    .hero-content h2 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .tagline {
-        font-size: 0.95rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
-    .btn {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-        padding: 10px 20px;
-        font-size: 0.95rem;
-    }
-
-    .highlights h2,
-    .menu h2,
-    .reviews h2,
-    .contact h2,
-    .location h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .highlights-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .highlight-card {
-        padding: 1.5rem;
-    }
-
-    .highlight-card i {
-        font-size: 2rem;
-    }
-
-    .menu-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .menu-image {
-        height: 150px;
-    }
-
-    .menu-item {
-        padding: 1rem;
-    }
-
-    .menu-item h3 {
-        font-size: 1rem;
-    }
-
-    .menu-item .description {
-        font-size: 0.9rem;
-    }
-
-    .menu-item .price {
-        font-size: 1.1rem;
-    }
-
-    .location-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .location-map {
-        min-height: 300px;
-    }
-
-    .info-box {
-        padding: 1rem;
-    }
-
-    .info-box h3 {
-        font-size: 1.1rem;
-    }
-
-    .menu-tabs {
-        flex-direction: row;
-        justify-content: center;
-        gap: 0.8rem;
-    }
-
-    .tab-button {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-        flex: 1;
-        min-width: 120px;
-    }
-
-    .reviews-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .review-card {
-        padding: 1.5rem;
-    }
-
-    .social-links {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    .social-badge {
-        width: 100%;
-        justify-content: center;
-        padding: 0.8rem 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 10px;
-    }
-
-    .navbar {
-        padding: 0.8rem 0;
-    }
-
-    .navbar .container {
-        gap: 0.8rem;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    .nav-links {
-        gap: 0.5rem;
-        font-size: 0.75rem;
-    }
-
-    .hero {
-        padding: 40px 10px;
-        min-height: 300px;
-    }
-
-    .hero-content h2 {
-        font-size: 1.3rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-
-    .tagline {
-        font-size: 0.85rem;
-        margin-bottom: 1rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: 0.6rem;
-    }
-
-    .btn {
-        padding: 10px 15px;
-        font-size: 0.85rem;
-        width: 100%;
-    }
-
-    .highlights h2,
-    .menu h2,
-    .reviews h2,
-    .contact h2,
-    .location h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .highlights-grid,
-    .menu-grid,
-    .reviews-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .highlight-card {
-        padding: 1rem;
-    }
-
-    .highlight-card i {
-        font-size: 1.8rem;
-    }
-
-    .highlight-card h3 {
-        font-size: 0.95rem;
-    }
-
-    .highlight-card p {
-        font-size: 0.85rem;
-    }
-
-    .menu-image {
-        height: 120px;
-    }
-
-    .menu-item {
-        padding: 0.8rem;
-    }
-
-    .menu-item h3 {
-        font-size: 0.95rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .menu-item .description {
-        font-size: 0.8rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .menu-item .price {
-        font-size: 1rem;
-    }
-
-    .menu-tabs {
-        flex-direction: column;
-        gap: 0.6rem;
-    }
-
-    .tab-button {
-        padding: 8px 12px;
-        font-size: 0.8rem;
-        width: 100%;
-    }
-
-    .location-content,
-    .contact-content {
-        gap: 1.5rem;
-    }
-
-    .info-box {
-        padding: 0.8rem;
-    }
-
-    .info-box h3 {
-        font-size: 1rem;
-    }
-
-    .info-box p {
-        font-size: 0.85rem;
-    }
-
-    .hours-table td {
-        padding: 0.3rem 0;
-        font-size: 0.85rem;
-    }
-
-    .hours-table td:first-child {
-        width: 80px;
-    }
-
-    .location-map {
-        min-height: 250px;
-    }
-
-    .review-card {
-        padding: 1rem;
-    }
-
-    .review-card .stars {
-        font-size: 1rem;
-    }
-
-    .review-card .review-text {
-        font-size: 0.85rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .review-card .review-author {
-        font-size: 0.9rem;
-    }
-
-    .contact-info h3,
-    .contact-services h3 {
-        font-size: 1.1rem;
-    }
-
-    .contact-info p,
-    .contact-services p {
-        font-size: 0.85rem;
-    }
-
-    .contact-list li {
-        font-size: 0.85rem;
-        padding: 0.3rem 0;
-    }
-
-    .social-links {
-        flex-direction: column;
-        gap: 0.6rem;
-    }
-
-    .social-badge {
-        width: 100%;
-        padding: 0.6rem 1rem;
-        font-size: 0.85rem;
-    }
-
-    .social-badge i {
-        font-size: 1rem;
-    }
-
-    .footer {
-        padding: 1.5rem;
-    }
-
-    .footer p {
-        font-size: 0.85rem;
-        margin: 0.3rem 0;
-    }
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Bar El Raconet Charrúa - Las mejores milanesas gigantes y tapas caseras en Barcelona. Ubicado en Horta-Guinardó.">
+    <meta name="keywords" content="milanesas, tapas, bar, Barcelona, Horta-Guinardó, comida casera">
+    <title>Bar El Raconet Charrúa - Las Mejores Milanesas de Barcelona</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1 class="logo">🍖 El Raconet Charrúa</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a El Raconet Charrúa</h2>
+            <p>Las mejores milanesas gigantes y tapas caseras de Barcelona</p>
+            <p class="tagline">Ambiente de barrio, comida excepcional, precios justos</p>
+            <div class="hero-buttons">
+                <a href="https://www.ubereats.com/es/store/el-raconet-charrua/bST8WYQuVTOIhvVQKmt_CQ" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-shopping-cart"></i> Pedir a Domicilio
+                </a>
+                <a href="#menu" class="btn btn-secondary">Ver Menú</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Destacados -->
+    <section class="highlights">
+        <div class="container">
+            <h2>¿Por Qué Elegirnos?</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <i class="fas fa-star"></i>
+                    <h3>4.7 Estrellas</h3>
+                    <p>Más de 1,246 reseñas positivas de clientes satisfechos</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Milanesas Gigantes</h3>
+                    <p>Nuestro plato estrella con ingredientes frescos y de calidad</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Ambiente Acogedor</h3>
+                    <p>Un lugar sencillo con el calor de un verdadero bar de barrio</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3>Precios Justos</h3>
+                    <p>Excelente relación calidad-precio, €10-20 por persona</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Nuestro Menú</h2>
+            <div class="menu-tabs">
+                <button class="tab-button active" onclick="showTab('tapas')">Nuestras Tapas</button>
+                <button class="tab-button" onclick="showTab('especiales')">Especiales</button>
+                <button class="tab-button" onclick="showTab('postres')">Postres</button>
+            </div>
+
+            <!-- Tapas -->
+            <div id="tapas" class="tab-content active">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/patatas-bravas.jpg" alt="Patatas Bravas" class="menu-image">
+                        <h3>Patatas Bravas</h3>
+                        <p class="description">Con nuestro alioli casero, salsa brava casera y chimichurri</p>
+                        <p class="price">7,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/patatas-bravas-pequenas.jpg" alt="Patatas Bravas Pequeñas" class="menu-image">
+                        <h3>Patatas Bravas Pequeñas</h3>
+                        <p class="description">Porción pequeña con alioli casero y salsa brava</p>
+                        <p class="price">5,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/carnivobravas.jpg" alt="Carnivobravas" class="menu-image">
+                        <h3>Carnivobravas</h3>
+                        <p class="description">Bravas con carne y salsa</p>
+                        <p class="price">10,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/pimientos-padron.jpg" alt="Pimientos del Padrón" class="menu-image">
+                        <h3>Pimientos del Padrón</h3>
+                        <p class="description">Frescos y sabrosos, con sal marina</p>
+                        <p class="price">8,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/pimientos-padron.jpg" alt="Pimientos del Padrón Pequeños" class="menu-image">
+                        <h3>Pimientos del Padrón Pequeños</h3>
+                        <p class="description">Porción pequeña de pimientos frescos</p>
+                        <p class="price">6,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/tequenos.jpg" alt="Tequeños" class="menu-image">
+                        <h3>Tequeños</h3>
+                        <p class="description">Queso derretido en masa crujiente</p>
+                        <p class="price">10,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/alitas-pollo.jpg" alt="Alitas de Pollo" class="menu-image">
+                        <h3>Alitas de Pollo</h3>
+                        <p class="description">Crujientes y jugosas</p>
+                        <p class="price">9,70 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/croquetas-cocido.jpg" alt="Croquetas de Cocido" class="menu-image">
+                        <h3>Croquetas de Cocido</h3>
+                        <p class="description">Tradicionales y caseras, 6 unidades</p>
+                        <p class="price">9,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/samosa.jpg" alt="Samosa" class="menu-image">
+                        <h3>Samosa</h3>
+                        <p class="description">Crujiente y sabrosa</p>
+                        <p class="price">6,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/blue-cheese.jpg" alt="Blue Cheese" class="menu-image">
+                        <h3>Blue Cheese</h3>
+                        <p class="description">Queso azul cremoso y delicioso</p>
+                        <p class="price">8,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/squid-calamares.jpg" alt="Squid" class="menu-image">
+                        <h3>Squid</h3>
+                        <p class="description">Calamares fritos crujientes</p>
+                        <p class="price">9,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/poutine.jpg" alt="Poutine" class="menu-image">
+                        <h3>Poutine</h3>
+                        <p class="description">Papas fritas con queso y salsa</p>
+                        <p class="price">7,50 €</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especiales -->
+            <div id="especiales" class="tab-content">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/milanesa-napolitana.jpg" alt="Milanesa Napolitana a Caballo" class="menu-image">
+                        <h3>Milanesa Napolitana a Caballo</h3>
+                        <p class="description">Nuestro plato estrella: milanesa gigante con huevo frito y queso derretido</p>
+                        <p class="price">14,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/milanesa-huevos.jpg" alt="Milanesa con Huevos" class="menu-image">
+                        <h3>Milanesa con Huevos</h3>
+                        <p class="description">Milanesa crujiente acompañada de huevos fritos</p>
+                        <p class="price">13,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/milanesa-simple.jpg" alt="Milanesa Simple" class="menu-image">
+                        <h3>Milanesa Simple</h3>
+                        <p class="description">Milanesa crujiente y dorada</p>
+                        <p class="price">11,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/schnitzel.jpg" alt="Schnitzel" class="menu-image">
+                        <h3>Schnitzel</h3>
+                        <p class="description">Milanesa de cerdo a la vienesa</p>
+                        <p class="price">12,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/empanadas.jpg" alt="Empanadas de Carne" class="menu-image">
+                        <h3>Empanadas de Carne</h3>
+                        <p class="description">Rellenas de carne, recién hechas</p>
+                        <p class="price">5,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/empanadas-pollo.jpg" alt="Empanadas de Pollo" class="menu-image">
+                        <h3>Empanadas de Pollo</h3>
+                        <p class="description">Rellenas de pollo, recién hechas</p>
+                        <p class="price">5,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/sandwich-milanesa.jpg" alt="Sándwich de Milanesa" class="menu-image">
+                        <h3>Sándwich de Milanesa</h3>
+                        <p class="description">Pan tostado con milanesa, lechuga y tomate</p>
+                        <p class="price">8,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/kebab-carne.jpg" alt="Kebab de Carne" class="menu-image">
+                        <h3>Kebab de Carne</h3>
+                        <p class="description">Carne jugosa con salsas y verduras</p>
+                        <p class="price">9,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/kebab-pollo.jpg" alt="Kebab de Pollo" class="menu-image">
+                        <h3>Kebab de Pollo</h3>
+                        <p class="description">Pollo tierno con salsas y verduras</p>
+                        <p class="price">8,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/raciones-patatas.jpg" alt="Raciones de Patatas" class="menu-image">
+                        <h3>Raciones de Patatas</h3>
+                        <p class="description">Papas fritas caseras crujientes</p>
+                        <p class="price">4,50 €</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Postres -->
+            <div id="postres" class="tab-content">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/tiramisu.jpg" alt="Tiramisu" class="menu-image">
+                        <h3>Tiramisu</h3>
+                        <p class="description">Clásico italiano, suave y delicioso</p>
+                        <p class="price">5,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/tres-leches.jpg" alt="Tres Leches" class="menu-image">
+                        <h3>Tres Leches</h3>
+                        <p class="description">Esponjoso y jugoso, favorito de nuestros clientes</p>
+                        <p class="price">5,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/flan-casero.webp" alt="Flan Casero" class="menu-image">
+                        <h3>Flan Casero</h3>
+                        <p class="description">Cremoso con caramelo casero</p>
+                        <p class="price">4,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/brownie-flan.jpg" alt="Brownie" class="menu-image">
+                        <h3>Brownie</h3>
+                        <p class="description">Chocolate intenso y pegajoso</p>
+                        <p class="price">5,00 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/helado.jpg" alt="Helado" class="menu-image">
+                        <h3>Helado</h3>
+                        <p class="description">Helado cremoso de varios sabores</p>
+                        <p class="price">3,50 €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación e Información -->
+    <section id="ubicacion" class="location">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-info">
+                    <h2>Encuéntranos</h2>
+                    <div class="info-box">
+                        <h3><i class="fas fa-map-marker-alt"></i> Dirección</h3>
+                        <p>Av. de la Mare de Déu de Montserrat, 175</p>
+                        <p>Horta-Guinardó, 08041 Barcelona, Spain</p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-phone"></i> Teléfono</h3>
+                        <p><a href="tel:+34655079990">+34 655 07 90 09</a></p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-clock"></i> Horario</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Lunes</td>
+                                <td>13:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Martes</td>
+                                <td>13:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Miércoles</td>
+                                <td>13:00 - 16:00 | 19:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Jueves</td>
+                                <td>13:00 - 16:00 | 19:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Viernes</td>
+                                <td>13:00 - 16:00 | 19:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Sábado</td>
+                                <td>13:00 - 16:00 | 19:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Domingo</td>
+                                <td>13:00 - 16:00 | 19:00 - 23:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.0842856847307!2d2.1697805!3d41.4193259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2cd194ae8cb%3A0x9bdb708d5568fcb!2sBar%20El%20Raconet%20Charrua!5e0!3m2!1ses!2ses!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section class="reviews">
+        <div class="container">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Un pequeño restaurante con comida sabrosa y excelente servicio."</p>
+                    <p class="review-author">- Cliente satisfecho</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Buena comida, porciones enormes, personal amable y precios razonables."</p>
+                    <p class="review-author">- Viajero internacional</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"¡Las mejores patatas bravas que he probado! Absolutamente perfectas."</p>
+                    <p class="review-author">- Amante de las tapas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¿Preguntas o Sugerencias?</h3>
+                    <p>Estamos aquí para servirte. Contáctanos a través de:</p>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-phone"></i> <a href="tel:+34655079990">+34 655 07 90 09</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/G9JC8jVjdqiGQbjm7" target="_blank">Av. de la Mare de Déu de Montserrat, 175, Barcelona</a></li>
+                        <li><i class="fas fa-instagram"></i> <a href="https://www.instagram.com/elraconetcharrua/" target="_blank">@elraconetcharrua</a></li>
+                        <li><i class="fas fa-facebook"></i> <a href="https://www.facebook.com/Elraconetdetots" target="_blank">El Raconet</a></li>
+                    </ul>
+                </div>
+                <div class="contact-services">
+                    <h3>¡Síguenos en Redes Sociales!</h3>
+                    <p>Mantente actualizado con nuestras promociones y novedades:</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/elraconetcharrua/" target="_blank" class="social-badge"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.facebook.com/Elraconetdetots" target="_blank" class="social-badge"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="https://maps.app.goo.gl/G9JC8jVjdqiGQbjm7" target="_blank" class="social-badge" style="background-color: #EA4335;"><i class="fas fa-map-marker-alt"></i> Google Maps</a>
+                        <a href="https://glovoapp.com/es/es/barcelona/" target="_blank" class="social-badge" style="background-color: #FFD000; color: #000;"><i class="fas fa-utensils"></i> Glovo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bar El Raconet Charrúa. Todos los derechos reservados.</p>
+            <p>Ubicado en el barrio de Horta-Guinardó, Barcelona</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
