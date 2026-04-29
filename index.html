@@ -1,1 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Bar El Raconet Charrúa - Las mejores milanesas gigantes y tapas caseras en Barcelona. Ubicado en Horta-Guinardó.">
+    <meta name="keywords" content="milanesas, tapas, bar, Barcelona, Horta-Guinardó, comida casera">
+    <title>Bar El Raconet Charrúa - Las Mejores Milanesas de Barcelona</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1 class="logo">🍖 El Raconet Charrúa</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a El Raconet Charrúa</h2>
+            <p>Las mejores milanesas gigantes y tapas caseras de Barcelona</p>
+            <p class="tagline">Ambiente de barrio, comida excepcional, precios justos</p>
+            <div class="hero-buttons">
+                <a href="https://www.ubereats.com/es/store/el-raconet-charrua/bST8WYQuVTOIhvVQKmt_CQ" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-shopping-cart"></i> Pedir a Domicilio
+                </a>
+                <a href="#menu" class="btn btn-secondary">Ver Menú</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Destacados -->
+    <section class="highlights">
+        <div class="container">
+            <h2>¿Por Qué Elegirnos?</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <i class="fas fa-star"></i>
+                    <h3>4.7 Estrellas</h3>
+                    <p>Más de 1,246 reseñas positivas de clientes satisfechos</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Milanesas Gigantes</h3>
+                    <p>Nuestro plato estrella con ingredientes frescos y de calidad</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Ambiente Acogedor</h3>
+                    <p>Un lugar sencillo con el calor de un verdadero bar de barrio</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3>Precios Justos</h3>
+                    <p>Excelente relación calidad-precio, €10-20 por persona</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Nuestro Menú</h2>
+            <div class="menu-tabs">
+                <button class="tab-button active" onclick="showTab('tapas')">Nuestras Tapas</button>
+                <button class="tab-button" onclick="showTab('especiales')">Especiales</button>
+                <button class="tab-button" onclick="showTab('postres')">Postres</button>
+            </div>
+
+            <!-- Tapas -->
+            <div id="tapas" class="tab-content active">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/patatas-bravas.jpg" alt="Patatas Bravas" class="menu-image">
+                        <h3>Patatas Bravas</h3>
+                        <p class="description">Con nuestro alioli casero, salsa brava casera y chimichurri</p>
+                        <p class="price">7,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/patatas-bravas-pequenas.jpg" alt="Patatas Bravas Pequeñas" class="menu-image">
+                        <h3>Patatas Bravas Pequeñas</h3>
+                        <p class="description">Porción pequeña con alioli casero y salsa brava</p>
+                        <p class="price">5,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/carnivobravas.jpg" alt="Carnivobravas" class="menu-image">
+                        <h3>Carnivobravas</h3>
+                        <p class="description">Bravas con carne y salsa</p>
+                        <p class="price">10,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/pimientos-padron.jpg" alt="Pimientos del Padrón" class="menu-image">
+                        <h3>Pimientos del Padrón</h3>
+                        <p class="description">Frescos y sabrosos, con sal marina</p>
+                        <p class="price">8,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/pimientos-padron.jpg" alt="Pimientos del Padrón Pequeños" class="menu-image">
+                        <h3>Pimientos del Padrón Pequeños</h3>
+                        <p class="description">Porción pequeña de pimientos frescos</p>
+                        <p class="price">6,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/tequenos.jpg" alt="Tequeños" class="menu-image">
+                        <h3>Tequeños</h3>
+                        <p class="description">Queso derretido en masa crujiente</p>
+                        <p class="price">10,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/alitas-pollo.jpg" alt="Alitas de Pollo" class="menu-image">
+                        <h3>Alitas de Pollo</h3>
+                        <p class="description">Crujientes y jugosas</p>
+                        <p class="price">9,70 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/croquetas-cocido.jpg" alt="Croquetas de Cocido" class="menu-image">
+                        <h3>Croquetas de Cocido</h3>
+                        <p class="description">Tradicionales y caseras, 6 unidades</p>
+                        <p class="price">9,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/samosa.jpg" alt="Samosa" class="menu-image">
+                        <h3>Samosa</h3>
+                        <p class="description">Crujiente y sabrosa</p>
+                        <p class="price">6,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/blue-cheese.jpg" alt="Blue Cheese" class="menu-image">
+                        <h3>Blue Cheese</h3>
+                        <p class="description">Queso azul cremoso y delicioso</p>
+                        <p class="price">8,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/squid-calamares.jpg" alt="Squid" class="menu-image">
+                        <h3>Squid</h3>
+                        <p class="description">Calamares fritos crujientes</p>
+                        <p class="price">9,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/poutine.jpg" alt="Poutine" class="menu-image">
+                        <h3>Poutine</h3>
+                        <p class="description">Papas fritas con queso y salsa</p>
+                        <p class="price">7,50 €</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especiales -->
+            <div id="especiales" class="tab-content">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/milanesa-napolitana.jpg" alt="Milanesa Napolitana a Caballo" class="menu-image">
+                        <h3>Milanesa Napolitana a Caballo</h3>
+                        <p class="description">Nuestro plato estrella: milanesa gigante con huevo frito y queso derretido</p>
+                        <p class="price">14,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/milanesa-huevos.jpg" alt="Milanesa con Huevos" class="menu-image">
+                        <h3>Milanesa con Huevos</h3>
+                        <p class="description">Milanesa crujiente acompañada de huevos fritos</p>
+                        <p class="price">13,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/milanesa-simple.jpg" alt="Milanesa Simple" class="menu-image">
+                        <h3>Milanesa Simple</h3>
+                        <p class="description">Milanesa crujiente y dorada</p>
+                        <p class="price">11,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/schnitzel.jpg" alt="Schnitzel" class="menu-image">
+                        <h3>Schnitzel</h3>
+                        <p class="description">Milanesa de cerdo a la vienesa</p>
+                        <p class="price">12,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/empanadas.jpg" alt="Empanadas de Carne" class="menu-image">
+                        <h3>Empanadas de Carne</h3>
+                        <p class="description">Rellenas de carne, recién hechas</p>
+                        <p class="price">5,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/empanadas-pollo.jpg" alt="Empanadas de Pollo" class="menu-image">
+                        <h3>Empanadas de Pollo</h3>
+                        <p class="description">Rellenas de pollo, recién hechas</p>
+                        <p class="price">5,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/sandwich-milanesa.jpg" alt="Sándwich de Milanesa" class="menu-image">
+                        <h3>Sándwich de Milanesa</h3>
+                        <p class="description">Pan tostado con milanesa, lechuga y tomate</p>
+                        <p class="price">8,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/kebab-carne.jpg" alt="Kebab de Carne" class="menu-image">
+                        <h3>Kebab de Carne</h3>
+                        <p class="description">Carne jugosa con salsas y verduras</p>
+                        <p class="price">9,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/kebab-pollo.jpg" alt="Kebab de Pollo" class="menu-image">
+                        <h3>Kebab de Pollo</h3>
+                        <p class="description">Pollo tierno con salsas y verduras</p>
+                        <p class="price">8,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/raciones-patatas.jpg" alt="Raciones de Patatas" class="menu-image">
+                        <h3>Raciones de Patatas</h3>
+                        <p class="description">Papas fritas caseras crujientes</p>
+                        <p class="price">4,50 €</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Postres -->
+            <div id="postres" class="tab-content">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/tiramisu.jpg" alt="Tiramisu" class="menu-image">
+                        <h3>Tiramisu</h3>
+                        <p class="description">Clásico italiano, suave y delicioso</p>
+                        <p class="price">5,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/tres-leches.jpg" alt="Tres Leches" class="menu-image">
+                        <h3>Tres Leches</h3>
+                        <p class="description">Esponjoso y jugoso, favorito de nuestros clientes</p>
+                        <p class="price">5,90 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/flan-casero.webp" alt="Flan Casero" class="menu-image">
+                        <h3>Flan Casero</h3>
+                        <p class="description">Cremoso con caramelo casero</p>
+                        <p class="price">4,50 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/brownie-flan.jpg" alt="Brownie" class="menu-image">
+                        <h3>Brownie</h3>
+                        <p class="description">Chocolate intenso y pegajoso</p>
+                        <p class="price">5,00 €</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/helado.jpg" alt="Helado" class="menu-image">
+                        <h3>Helado</h3>
+                        <p class="description">Helado cremoso de varios sabores</p>
+                        <p class="price">3,50 €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación e Información -->
+    <section id="ubicacion" class="location">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-info">
+                    <h2>Encuéntranos</h2>
+                    <div class="info-box">
+                        <h3><i class="fas fa-map-marker-alt"></i> Dirección</h3>
+                        <p>Av. de la Mare de Déu de Montserrat, 175</p>
+                        <p>Horta-Guinardó, 08041 Barcelona, Spain</p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-phone"></i> Teléfono</h3>
+                        <p><a href="tel:+34655079009">+34 655 07 90 09</a></p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-clock"></i> Horario</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Lunes</td>
+                                <td>13:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Martes</td>
+                                <td>13:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Miércoles</td>
+                                <td>13:00 - 16:00 | 19:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Jueves</td>
+                                <td>13:00 - 16:00 | 19:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Viernes</td>
+                                <td>13:00 - 16:00 | 19:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Sábado</td>
+                                <td>13:00 - 16:00 | 19:00 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Domingo</td>
+                                <td>13:00 - 16:00 | 19:00 - 23:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.0842856847307!2d2.1697805!3d41.4193259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2cd194ae8cb%3A0x9bdb708d5568fcb!2sBar%20El%20Raconet%20Charrua!5e0!3m2!1ses!2ses!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section class="reviews">
+        <div class="container">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Un pequeño restaurante con comida sabrosa y excelente servicio."</p>
+                    <p class="review-author">- Cliente satisfecho</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Buena comida, porciones enormes, personal amable y precios razonables."</p>
+                    <p class="review-author">- Viajero internacional</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"¡Las mejores patatas bravas que he probado! Absolutamente perfectas."</p>
+                    <p class="review-author">- Amante de las tapas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¿Preguntas o Sugerencias?</h3>
+                    <p>Estamos aquí para servirte. Contáctanos a través de:</p>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-phone"></i> <a href="tel:+34655079009">+34 655 07 90 09</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/G9JC8jVjdqiGQbjm7" target="_blank">Av. de la Mare de Déu de Montserrat, 175, Barcelona</a></li>
+                        <li><i class="fas fa-instagram"></i> <a href="https://www.instagram.com/elraconetcharrua/" target="_blank">@elraconetcharrua</a></li>
+                        <li><i class="fas fa-facebook"></i> <a href="https://www.facebook.com/Elraconetdetots" target="_blank">El Raconet</a></li>
+                    </ul>
+                </div>
+                <div class="contact-services">
+                    <h3>¡Síguenos en Redes Sociales!</h3>
+                    <p>Mantente actualizado con nuestras promociones y novedades:</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/elraconetcharrua/" target="_blank" class="social-badge"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.facebook.com/Elraconetdetots" target="_blank" class="social-badge"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="https://maps.app.goo.gl/G9JC8jVjdqiGQbjm7" target="_blank" class="social-badge" style="background-color: #EA4335;"><i class="fas fa-map-marker-alt"></i> Google Maps</a>
+                        <a href="https://glovoapp.com/es/es/barcelona/" target="_blank" class="social-badge" style="background-color: #FFD000; color: #000;"><i class="fas fa-utensils"></i> Glovo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bar El Raconet Charrúa. Todos los derechos reservados.</p>
+            <p>Ubicado en el barrio de Horta-Guinardó, Barcelona</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
